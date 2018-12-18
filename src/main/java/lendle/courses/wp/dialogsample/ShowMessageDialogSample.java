@@ -5,6 +5,8 @@
  */
 package lendle.courses.wp.dialogsample;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author lendle
@@ -38,12 +40,27 @@ public class ShowMessageDialogSample extends javax.swing.JFrame {
         getContentPane().setLayout(new java.awt.GridLayout(6, 1));
 
         jButton1.setText("Default");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                errorButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
 
         jButton2.setText("Error");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                informationButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
 
         jButton3.setText("Information");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlainButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3);
 
         jButton4.setText("Plain");
@@ -57,6 +74,20 @@ public class ShowMessageDialogSample extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void errorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_errorButtonActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "hello","",JOptionPane.ERROR_MESSAGE);
+    }//GEN-LAST:event_errorButtonActionPerformed
+
+    private void informationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_informationButtonActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "hello","",JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_informationButtonActionPerformed
+
+    private void PlainButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlainButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PlainButtonActionPerformed
 
     /**
      * @param args the command line arguments
