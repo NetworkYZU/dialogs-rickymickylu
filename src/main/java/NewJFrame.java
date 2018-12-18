@@ -15,6 +15,8 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
+        DefaultTableModel model = new DefaultTableModel();
+        getJMenuBar()
     }
 
     /**
